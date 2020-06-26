@@ -23,6 +23,16 @@ final class ViewController: UIViewController {
         configureHieraechy()
         configureDataSource()
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddViewController" {
+            let addViewController = segue.destination as! AddViewController
+            addViewController.close = {
+                print("called")
+                self.collectionView.reloadData()
+            }
+        }
+    }
 }
 
 extension ViewController {
