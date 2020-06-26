@@ -19,7 +19,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "CollectionViewのテストだよー！"
+        navigationItem.title = "タイトル"
         configureHieraechy()
         configureDataSource()
     }
@@ -27,7 +27,8 @@ final class ViewController: UIViewController {
 
 extension ViewController {
     private func createView() -> UICollectionViewLayout {
-        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        //ここでcollectionViewの種類を設定、今まで通り使うならplainかな
+        let config = UICollectionLayoutListConfiguration(appearance: .plain)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
