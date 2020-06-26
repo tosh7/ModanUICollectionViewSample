@@ -27,7 +27,7 @@ final class ViewController: UIViewController {
 
 extension ViewController {
     private func createView() -> UICollectionViewLayout {
-        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        let config = UICollectionLayoutListConfiguration(appearance: .inseotGrouped)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
@@ -50,13 +50,18 @@ extension ViewController {
             cell.contentConfiguration = content
         }
 
+        //dataSOurceの中身をセット
         dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) { (collectionView, indexPath, identifier) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: celRRegistration, for: indexPath, item: identifier)
         }
 
+        //snapshotがなぜ必要？？？
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        //sectionをセット
         snapshot.appendSections([.main])
+        //これは配列の数
         snapshot.appendItems(Array(0..<12))
+        //snapshotを適用させている
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
