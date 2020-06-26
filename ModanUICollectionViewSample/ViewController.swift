@@ -27,7 +27,7 @@ final class ViewController: UIViewController {
 
 extension ViewController {
     private func createView() -> UICollectionViewLayout {
-        let config = UICollectionLayoutListConfiguration(appearance: .inseotGrouped)
+        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
@@ -67,5 +67,8 @@ extension ViewController {
 }
 
 extension ViewController: UICollectionViewDelegate {
-
+    //cellタップ時に呼ばれるメソッドここは今までと変わらず
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
