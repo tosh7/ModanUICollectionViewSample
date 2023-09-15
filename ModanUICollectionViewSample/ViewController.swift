@@ -55,10 +55,8 @@ extension ViewController {
 
     private func configureDataSource() {
         //cellの中身をセット
-        let celRRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Int> { (cell, indexPath, item) in
-            var content = cell.defaultContentConfiguration()
-            content.text = "\(item)"
-            cell.contentConfiguration = content
+        let celRRegistration = UICollectionView.CellRegistration<CustomCell, Int> { (cell, indexPath, item) in
+            cell.title.text = String(indexPath.row)
         }
 
         //dataSOurceの中身をセット

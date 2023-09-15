@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19ED88562AB3F82D008C79CF /* CustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ED88552AB3F82D008C79CF /* CustomeCell.swift */; };
 		67EF2B8224A55F44007F21F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF2B8124A55F44007F21F6 /* AppDelegate.swift */; };
 		67EF2B8424A55F44007F21F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */; };
 		67EF2B8624A55F44007F21F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF2B8524A55F44007F21F6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19ED88552AB3F82D008C79CF /* CustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeCell.swift; sourceTree = "<group>"; };
 		67EF2B7E24A55F44007F21F6 /* ModanUICollectionViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModanUICollectionViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EF2B8124A55F44007F21F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				67EF2B8124A55F44007F21F6 /* AppDelegate.swift */,
 				67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */,
 				67EF2B8524A55F44007F21F6 /* ViewController.swift */,
+				19ED88552AB3F82D008C79CF /* CustomeCell.swift */,
 				67EF2B8724A55F44007F21F6 /* Main.storyboard */,
 				67EF2B8A24A55F46007F21F6 /* Assets.xcassets */,
 				67EF2B8C24A55F46007F21F6 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				67EF2B8624A55F44007F21F6 /* ViewController.swift in Sources */,
 				67EF2B8224A55F44007F21F6 /* AppDelegate.swift in Sources */,
+				19ED88562AB3F82D008C79CF /* CustomeCell.swift in Sources */,
 				67EF2B9624A67A48007F21F6 /* AddViewController.swift in Sources */,
 				67EF2B8424A55F44007F21F6 /* SceneDelegate.swift in Sources */,
 			);
