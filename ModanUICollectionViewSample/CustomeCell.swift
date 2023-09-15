@@ -18,7 +18,10 @@ final class CustomCell: UICollectionViewListCell {
         title.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         title.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        let hightConstraint = title.heightAnchor.constraint(equalToConstant: 150)
+        hightConstraint.isActive = true
+        // ここの1行のコメントアウトを外すと、制約のエラーが出ない
+//        hightConstraint.priority = .defaultHigh
     }
 
     required init?(coder: NSCoder) {
