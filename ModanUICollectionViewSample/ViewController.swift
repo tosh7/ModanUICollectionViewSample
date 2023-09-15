@@ -13,15 +13,29 @@ final class ViewController: UIViewController {
         case main
     }
 
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
-    var collectionView: UICollectionView! = nil
+    lazy var collectionView: UICollectionView = {
+        let c = UICollectionView(frame: view.bounds, collectionViewLayout: createView())
+        c.delegate = self
+        return c
+    }()
+    lazy var dataSource: UICollectionViewDiffableDataSource<Section, Int> = createDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "タイトル"
-        configureHieraechy()
-        configureDataSource()
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        updateUI()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,46 +51,33 @@ final class ViewController: UIViewController {
 
 extension ViewController {
     private func createView() -> UICollectionViewLayout {
-        //ここでcollectionViewの種類を設定、今まで通り使うならplainかな
+        // UICollectionViewListを使用する。
         let config = UICollectionLayoutListConfiguration(appearance: .plain)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
 
-//これはDataSource的なやつ？？？
 extension ViewController {
-    //ここに関してはいわゆるAutlayout的なやつをかけ、addSubviewをしているだけである
-    private func configureHieraechy() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createView())
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-    }
 
-    private func configureDataSource() {
-        //cellの中身をセット
+    private func createDataSource() -> UICollectionViewDiffableDataSource<Section, Int> {
         let celRRegistration = UICollectionView.CellRegistration<CustomCell, Int> { (cell, indexPath, item) in
             cell.title.text = String(indexPath.row)
         }
 
-        //dataSOurceの中身をセット
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) { (collectionView, indexPath, identifier) -> UICollectionViewCell? in
-            return collectionView.dequeueConfiguredReusableCell(using: celRRegistration, for: indexPath, item: identifier)
+        return UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) { (collectionView, indexPath, identifier) -> UICollectionViewCell? in
+            collectionView.dequeueConfiguredReusableCell(using: celRRegistration, for: indexPath, item: identifier)
         }
+    }
 
-        //snapshotがなぜ必要？？？
+    func updateUI() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
-        //sectionをセット
         snapshot.appendSections([.main])
-        //これは配列の数
         snapshot.appendItems(Array(0..<12))
-        //snapshotを適用させている
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 
 extension ViewController: UICollectionViewDelegate {
-    //cellタップ時に呼ばれるメソッドここは今までと変わらず
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
     }
