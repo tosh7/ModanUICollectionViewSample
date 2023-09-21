@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
     }
 
     lazy var collectionView: UICollectionView = {
-        let c = UICollectionView(frame: view.bounds, collectionViewLayout: createView())
+        let c = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout())
         c.delegate = self
         return c
     }()
@@ -50,7 +50,7 @@ final class ViewController: UIViewController {
 }
 
 extension ViewController {
-    private func createView() -> UICollectionViewLayout {
+    private func collectionViewLayout() -> UICollectionViewLayout {
         // UICollectionViewListを使用する。
         let config = UICollectionLayoutListConfiguration(appearance: .plain)
         return UICollectionViewCompositionalLayout.list(using: config)
