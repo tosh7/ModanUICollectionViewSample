@@ -61,7 +61,7 @@ extension ViewController {
 
     private func createDataSource() -> UICollectionViewDiffableDataSource<Section, Int> {
         let celRRegistration = UICollectionView.CellRegistration<CustomCell, Int> { (cell, indexPath, item) in
-            cell.title.text = String(indexPath.row)
+            cell.title = String(indexPath.row)
         }
 
         return UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) { (collectionView, indexPath, identifier) -> UICollectionViewCell? in
