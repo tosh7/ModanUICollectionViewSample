@@ -12,7 +12,7 @@ enum Scene: String, CaseIterable {
     case normal
     case uIListContentConfiguration
     case intrinsicContentSize
-//    case accordion
+    case accordion
 
     var vc: UIViewController {
         switch self {
@@ -22,6 +22,8 @@ enum Scene: String, CaseIterable {
             return ViewController()
         case .intrinsicContentSize:
             return ViewController()
+        case .accordion:
+            return AccordionViewController()
         }
     }
 }
