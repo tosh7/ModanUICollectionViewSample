@@ -43,6 +43,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19C1FD582AD1508F005159D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				19C1FD5A2AD150BA005159D5 /* List */,
+				19C1FD592AD150A7005159D5 /* HomeList */,
+				19C1FD5F2AD15125005159D5 /* Add */,
+				19C1FD5B2AD150D6005159D5 /* Accordion */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		19C1FD592AD150A7005159D5 /* HomeList */ = {
+			isa = PBXGroup;
+			children = (
+				19C1FD542AD109DA005159D5 /* HomeListViewController.swift */,
+			);
+			path = HomeList;
+			sourceTree = "<group>";
+		};
+		19C1FD5A2AD150BA005159D5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				67EF2B8524A55F44007F21F6 /* ViewController.swift */,
+				19ED88552AB3F82D008C79CF /* CustomeCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		19C1FD5B2AD150D6005159D5 /* Accordion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Accordion;
+			sourceTree = "<group>";
+		};
+		19C1FD5C2AD15103005159D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19C1FD562AD10A5E005159D5 /* Scene.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19C1FD5F2AD15125005159D5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				67EF2B9524A67A48007F21F6 /* AddViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
 		67EF2B7524A55F44007F21F6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +115,11 @@
 			children = (
 				67EF2B8124A55F44007F21F6 /* AppDelegate.swift */,
 				67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */,
-				67EF2B8524A55F44007F21F6 /* ViewController.swift */,
-				19C1FD542AD109DA005159D5 /* HomeListViewController.swift */,
-				19C1FD562AD10A5E005159D5 /* Scene.swift */,
-				19ED88552AB3F82D008C79CF /* CustomeCell.swift */,
+				19C1FD5C2AD15103005159D5 /* Models */,
+				19C1FD582AD1508F005159D5 /* ViewControllers */,
 				67EF2B8A24A55F46007F21F6 /* Assets.xcassets */,
 				67EF2B8C24A55F46007F21F6 /* LaunchScreen.storyboard */,
 				67EF2B8F24A55F46007F21F6 /* Info.plist */,
-				67EF2B9524A67A48007F21F6 /* AddViewController.swift */,
 			);
 			path = ModanUICollectionViewSample;
 			sourceTree = "<group>";
