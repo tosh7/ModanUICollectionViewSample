@@ -23,7 +23,7 @@ final class HomeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "タイトル"
+        navigationItem.title = "CollectionViewLists"
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -42,7 +42,7 @@ final class HomeListViewController: UIViewController {
 extension HomeListViewController {
     private func collectionViewLayout() -> UICollectionViewLayout {
         // UICollectionViewListを使用する。
-        let config = UICollectionLayoutListConfiguration(appearance: .plain)
+        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 }
