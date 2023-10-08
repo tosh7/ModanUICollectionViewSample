@@ -11,6 +11,7 @@
 		19C1FD572AD10A5E005159D5 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1FD562AD10A5E005159D5 /* Scene.swift */; };
 		19C1FD612AD151B3005159D5 /* AccordionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1FD602AD151B3005159D5 /* AccordionViewController.swift */; };
 		19C1FD632AD15241005159D5 /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1FD622AD15241005159D5 /* AccordionView.swift */; };
+		19C1FD662AD1741A005159D5 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C1FD652AD1741A005159D5 /* Array+extension.swift */; };
 		19ED88562AB3F82D008C79CF /* CustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ED88552AB3F82D008C79CF /* CustomeCell.swift */; };
 		67EF2B8224A55F44007F21F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF2B8124A55F44007F21F6 /* AppDelegate.swift */; };
 		67EF2B8424A55F44007F21F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		19C1FD562AD10A5E005159D5 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		19C1FD602AD151B3005159D5 /* AccordionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionViewController.swift; sourceTree = "<group>"; };
 		19C1FD622AD15241005159D5 /* AccordionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionView.swift; sourceTree = "<group>"; };
+		19C1FD652AD1741A005159D5 /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
 		19ED88552AB3F82D008C79CF /* CustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeCell.swift; sourceTree = "<group>"; };
 		67EF2B7E24A55F44007F21F6 /* ModanUICollectionViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModanUICollectionViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EF2B8124A55F44007F21F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = Add;
 			sourceTree = "<group>";
 		};
+		19C1FD642AD173FD005159D5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				19C1FD652AD1741A005159D5 /* Array+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		67EF2B7524A55F44007F21F6 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 				67EF2B8324A55F44007F21F6 /* SceneDelegate.swift */,
 				19C1FD5C2AD15103005159D5 /* Models */,
 				19C1FD582AD1508F005159D5 /* ViewControllers */,
+				19C1FD642AD173FD005159D5 /* Utils */,
 				67EF2B8A24A55F46007F21F6 /* Assets.xcassets */,
 				67EF2B8C24A55F46007F21F6 /* LaunchScreen.storyboard */,
 				67EF2B8F24A55F46007F21F6 /* Info.plist */,
@@ -206,6 +217,7 @@
 				67EF2B8224A55F44007F21F6 /* AppDelegate.swift in Sources */,
 				19ED88562AB3F82D008C79CF /* CustomeCell.swift in Sources */,
 				19C1FD572AD10A5E005159D5 /* Scene.swift in Sources */,
+				19C1FD662AD1741A005159D5 /* Array+extension.swift in Sources */,
 				67EF2B9624A67A48007F21F6 /* AddViewController.swift in Sources */,
 				67EF2B8424A55F44007F21F6 /* SceneDelegate.swift in Sources */,
 			);

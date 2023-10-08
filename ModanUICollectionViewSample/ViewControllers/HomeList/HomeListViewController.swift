@@ -72,9 +72,7 @@ extension HomeListViewController {
 extension HomeListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        // TODO: better use safe index
-//        guard let vc = Scene.allCases[safe: indexPath.row]?.vc else { return }
-        let vc = Scene.allCases[indexPath.row].vc
+        guard let vc = Scene.allCases[safe: indexPath.row]?.vc else { return }
 
         navigationController?.pushViewController(vc, animated: true)
     }
